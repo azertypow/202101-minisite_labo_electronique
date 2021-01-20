@@ -1,5 +1,5 @@
 module.exports = {
-  title: "distortions.",
+  title: "Electronics Lab.",
   description: "site description",
   locales: {
     "/": {
@@ -7,13 +7,15 @@ module.exports = {
     },
   },
 
+  base: "/sensing_nature/",
+
   head: [
       ['link', {rel: 'shortcut icon', href: '/resources/favicon.png'}],
       ['link', {rel: 'apple-touch-icon', href: '/resources/touchicon-180.png'}],
   ],
 
   themeConfig: {
-    articlesNames: "series"
+    articlesNames: "sensing nature"
   },
 
   markdown: {

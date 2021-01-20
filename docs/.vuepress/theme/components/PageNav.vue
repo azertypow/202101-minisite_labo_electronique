@@ -41,7 +41,7 @@
       components: {PagesList},
       created(this: Layout) {
         this.$nextTick(() => {
-          console.log("PageNav: next created")
+          // console.log("PageNav: next created")
         })
       },
     })

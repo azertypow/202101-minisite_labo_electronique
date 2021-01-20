@@ -6,19 +6,22 @@
             <div class="v-continue-to-read__left">
                 <h3>Follow us</h3>
                 <div class="l-ui-items">
-                    <a href="https://twitter.com/HeadMediaDesign" class="l-ui-link-no-style">Twitter</a>
-                    <a href="https://www.instagram.com/headmediadesign/" class="l-ui-link-no-style">Instagram</a>
-                    <a href="https://vimeo.com/headmediadesign" class="l-ui-link-no-style">Vimeo</a>
-                    <a href="https://www.hesge.ch/head/en/programs-research/master-arts-media-design" class="l-ui-link-no-style">Head&nbsp;–&nbsp;Genève</a>
+                    <a target="_blank" class="l-ui-link-no-style" href="https://www.instagram.com/headmediadesign/" >Instagram</a>
+                    <a target="_blank" class="l-ui-link-no-style" href="https://www.youtube.com/channel/UClTZNYlTul2sca3t5K2y76g" >Youtube</a>
+                    <a target="_blank" class="l-ui-link-no-style" href="https://twitter.com/HeadMediaDesign" >Twitter</a>
+                    <a target="_blank" class="l-ui-link-no-style" href="https://vimeo.com/headmediadesign" >Vimeo</a>
                 </div>
             </div>
 
-            <RouterLink class="v-continue-to-read__right l-ui-link-no-style" :to="nextArticle.path">
-                <h3>Next project</h3>
+            <a class="v-continue-to-read__right l-ui-link-no-style"
+               href="https://www.hesge.ch/head/en/programs-research/master-arts-media-design"
+               target="_blank"
+            >
+                <h3>HEAD&nbsp;–&nbsp;Genève</h3>
                 <div>
-                    {{ nextArticle.title }} ->
+                  more informations -->
                 </div>
-            </RouterLink>
+            </a>
 
         </div>
 

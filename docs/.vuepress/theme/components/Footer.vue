@@ -11,7 +11,7 @@
 
                 <div class="v-footer__top__right">
                     <h6 @click="toggleAbout" >
-                        <span class="l-ui-link-no-style">© 2020 Master Media Design, Head&nbsp;–&nbsp;Genève</span>
+                        <span class="l-ui-link-no-style">© 2021 Master Media Design, HEAD&nbsp;–&nbsp;Genève</span>
                     </h6>
         <!--            <h6><span >Nicolas Baldran et David Héritier</span></h6>-->
                 </div>
@@ -41,35 +41,15 @@
       }
 
       get aboutIsOpen(): boolean {
-        if( this.isHome ) return true
         return this.pProps.aboutIsOpen
       }
 
       get arrowAboutDirectionToTop() {
-        if( this.isHome ) return false
         return this.pProps.aboutIsOpen
       }
 
-      get isHome() {
-        return this.$page.path === '/'
-      }
-
       toggleAbout() {
-        if( !this.isHome ) {
-
-          this.pProps.aboutIsOpen = !this.aboutIsOpen
-
-          // setTimeout(() => {
-          //     window.scroll({
-          //       top: document.body.getBoundingClientRect().height
-          //     })
-          // }, 150)
-
-        }
-
-        console.log(this.$el)
-        console.log("from: ", window.pageYOffset)
-        console.log("to: ", window.pageYOffset + this.$el.getBoundingClientRect().top)
+        this.pProps.aboutIsOpen = !this.aboutIsOpen
 
         smoothScroll({
           from: window.pageYOffset,

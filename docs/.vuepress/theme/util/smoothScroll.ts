@@ -6,8 +6,8 @@ export function smoothScroll({from, to}: { from: number, to: number }) {
   const duration = 1000
   let start: number | null = null
 
-  console.log(distance)
-  console.log("getHeightOfWindowScrollX: ", getHeightOfWindowScrollX() )
+  // console.log(distance)
+  // console.log("getHeightOfWindowScrollX: ", getHeightOfWindowScrollX() )
 
   window.requestAnimationFrame( step )
 

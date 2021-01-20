@@ -42,6 +42,7 @@ async function main() {
                     )
                     fileImageLoaded++
                     console.info(`${fileImageLoaded} / ${imageLinks.length} images loaded for ${markdownFile.getRelativePath()}`)
+                    console.info(`link: ${link}`)
 
                     const resizeImagePath_icon          = path.resolve( loadedImage.directoryPath, `icon-${loadedImage.fileName}` )
                     const resizeImagePath_small         = path.resolve( loadedImage.directoryPath, `small-${loadedImage.fileName}` )

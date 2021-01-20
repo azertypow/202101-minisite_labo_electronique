@@ -10,8 +10,7 @@
       minHeight: mainMinHeight
     }">
 
-      <div class="l-app-content__info"
-           v-if="$page.path !== '/'">
+      <div class="l-app-content__info">
 
 
         <div class="l-app-content__info__left">
@@ -32,7 +31,6 @@
       </div>
 
       <h1
-              v-if="$page.path !== '/'"
               class="l-app-content__title"
               v-html="this.articleTitle"></h1>
 
@@ -51,9 +49,7 @@
       <GalleryImage class="to-animate" v-if="storeData.imageGallery" :prop="storeData.imageGallery"></GalleryImage>
     </transition>
 
-    <ContinueToRead
-            v-if="$page.path !== '/'"
-    />
+    <ContinueToRead/>
 
     <Footer ref="appFooter"></Footer>
 
@@ -80,7 +76,7 @@ import {ImageLazyLoad} from "../util/ImageLazyLoad"
       this.updateHeaderVariables()
       this.setImageLayout()
       this.setMainMinHeight()
-      console.log("next mounted")
+      // console.log("next mounted")
     })
 
     window.addEventListener("scroll", this.scrollEvent)
@@ -151,6 +147,8 @@ export default class Layout extends Vue {
 
     pElementNodeList.forEach( pElement => {
 
+      // console.log(pElement)
+
       const imageInPElementNodeList = pElement.querySelectorAll('p > img')
 
       if(imageInPElementNodeList.length > 1) {
@@ -213,10 +211,6 @@ export default class Layout extends Vue {
 
   }
 
-  get isHome() {
-    return this.$page.path === '/'
-  }
-
   mainMinHeight = ""
 
   get defaultMainMinHeight(): string {
@@ -241,32 +235,21 @@ export default class Layout extends Vue {
 
   setMainMinHeight() {
 
-    if( this.isHome ) {
-      const footer = this.$refs.appFooter
+    const footer = this.$refs.appFooter
 
-      console.info('is hone')
+    console.info('is home')
 
-      if( "$el" in footer ) {
+    if( "$el" in footer ) {
 
-        const footerHeight = footer.$el.getBoundingClientRect().height
-        this.mainMinHeight = `calc( 100vh - ${this.pageHeaderHeight} - ${this.mainMarginBottom} - ${footerHeight}px )`
+      const footerHeight = footer.$el.getBoundingClientRect().height
+      this.mainMinHeight = `calc( 100vh - ${this.pageHeaderHeight} - ${this.mainMarginBottom} - ${footerHeight}px )`
 
-        return
+      return
 
-      }
     }
 
     this.mainMinHeight = this.defaultMainMinHeight
   }
-
-  // todo: random position for home over images
-  // randomPosition(): {x: number, y: number, z: number} {
-  //   return {
-  //     x: Math.random() * this.$el.getBoundingClientRect().width,
-  //     y: Math.random() * this.$el.getBoundingClientRect().height,
-  //     z: Math.random() * 100,
-  //   }
-  // }
 
 }
 </script>

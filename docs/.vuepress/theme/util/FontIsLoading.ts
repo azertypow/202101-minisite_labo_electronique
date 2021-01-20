@@ -34,10 +34,10 @@ export class FontIsLoading {
     this.context.font = `1000px ${this.fontFamilyName}`
     const loadingTestFontWidth = this.context.measureText( text ).width
 
-    console.log( "----" )
-    console.log( "referenceFontWidth: ", referenceFontWidth )
-    console.log( "loadingTestFontWidth: ", loadingTestFontWidth )
-    console.log( "referenceFontWidth !== loadingTestFontWidth: ", referenceFontWidth !== loadingTestFontWidth )
+    // console.log( "----" )
+    // console.log( "referenceFontWidth: ", referenceFontWidth )
+    // console.log( "loadingTestFontWidth: ", loadingTestFontWidth )
+    // console.log( "referenceFontWidth !== loadingTestFontWidth: ", referenceFontWidth !== loadingTestFontWidth )
 
     this.context.fillText("text test", 0, 2000)
 

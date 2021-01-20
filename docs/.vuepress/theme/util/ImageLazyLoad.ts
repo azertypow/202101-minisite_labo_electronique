@@ -125,7 +125,7 @@ export class ImageLazyLoad {
 
     const smallImageName = "icon-" + imgFileName
 
-    return `https://distortion.mastermediadesign.ch/resources${this.imgArticleRelativePath}${smallImageName}`
+    return `https://projects.mastermediadesign.ch/sensing_nature/resources${this.imgArticleRelativePath}${smallImageName}`
   }
 
 }
